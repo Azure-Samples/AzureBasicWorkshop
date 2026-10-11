@@ -1,4 +1,4 @@
-# Contributing to [project-title]
+# Contributing to Azure Basic Workshop
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
@@ -51,26 +51,31 @@ chances of your issue being dealt with quickly:
 * **Suggest a Fix** - if you can't fix the bug yourself, perhaps you can point to what might be
   causing the problem (line of code or commit)
 
-You can file new issues by providing the above information at the corresponding repository's issues link: https://github.com/[organization-name]/[repository-name]/issues/new].
+You can file new issues in the [upstream Azure Basic Workshop issue tracker](https://github.com/Azure-Samples/AzureBasicWorkshop/issues/new). Issues are not enabled on the current fork. For security vulnerabilities, use [SECURITY.md](SECURITY.md) instead of a public issue. See [SUPPORT.md](SUPPORT.md) for the support status.
 
 ### <a name="submit-pr"></a> Submitting a Pull Request (PR)
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-* Search the repository (https://github.com/[organization-name]/[repository-name]/pulls) for an open or closed PR
+* Search the [upstream pull requests](https://github.com/Azure-Samples/AzureBasicWorkshop/pulls) for an open or closed PR
   that relates to your submission. You don't want to duplicate effort.
 
-* Make your changes in a new git fork:
+* Make your changes in a dedicated branch of your fork. Keep unrelated local changes intact.
 
 * Commit your changes using a descriptive commit message
 * Push your fork to GitHub:
-* In GitHub, create a pull request
+* In GitHub, create a pull request against the intended repository's `main` branch. Use the repository's pull request template.
 * If we suggest changes then:
   * Make the required updates.
-  * Rebase your fork and force push to your GitHub repository (this will update your Pull Request):
+  * Add follow-up commits to your pull request branch. Do not rewrite shared history without the maintainer's approval.
 
-    ```shell
-    git rebase master -i
-    git push -f
-    ```
+## Workshop validation
+
+This workshop uses Azure Portal and Bastion. It does not require `npm install`, notebooks, or a devcontainer.
+
+Run all nine commands in [AGENTS.md](AGENTS.md#검증-하네스) from the repository root using Git Bash or a Bash-based environment. The checks require gitleaks 8.19 or newer, Python 3.10 or newer, and PyYAML. Record each command, its exit status, and its actual result; a final `PASS` does not override an earlier error.
+
+Keep validation logs and decision records under the Git-ignored `local-only` directory. Share only redacted summaries in a pull request. Preserve lab commands, images, navigation, and the existing MIT copyright notice. Document any changes to lab behavior separately.
+
+Automated checks do not replace a complete portal run or a review of screenshots for private information. Leave `validated_on` blank until a person completes the workshop and provides the date. Do not invent durations, cost estimates, or successful execution results. List unresolved TODOs, including licensing and support policy decisions, in the pull request.
 
 That's it! Thank you for your contribution!

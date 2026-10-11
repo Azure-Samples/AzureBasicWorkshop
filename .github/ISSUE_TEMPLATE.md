@@ -22,12 +22,13 @@ IF SUFFICIENT INFORMATION IS NOT PROVIDED VIA THE FOLLOWING TEMPLATE THE ISSUE M
 >
 
 ### OS and Version?
-> Windows 7, 8 or 10. Linux (which distribution). macOS (Yosemite? El Capitan? Sierra?)
+> Browser and version, Azure Portal language, and VM image/version if the issue occurs inside a VM.
 
 ### Versions
->
+> Workshop branch or commit, lab, and step. Include relevant package versions if known.
 
 ### Mention any other details that might be useful
+> Remove credentials, subscription/tenant IDs, private resource identifiers, and personal information from logs and screenshots. Report security vulnerabilities using SECURITY.md, not a public issue.
 
 > ---------------------------------------------------------------
 > Thanks! We'll be in touch soon.
